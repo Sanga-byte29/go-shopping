@@ -4,29 +4,29 @@ import { Bars3Icon, BellIcon, ShoppingCartIcon, XMarkIcon } from '@heroicons/rea
 import { Link } from 'react-router-dom'
 
 const user = {
-    name: 'Tom Cook',
-    email: 'tom@example.com',
-    imageUrl:
-      'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  }
-  const navigation = [
-    { name: 'Dashboard', href: '#', current: true },
-    { name: 'Team', href: '#', current: false },
-  ]
-  const userNavigation = [
-    { name: 'Your Profile', href: '#' },
-    { name: 'Settings', href: '#' },
-    { name: 'Sign out', href: '#' },
-  ]
-  
-  function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-  }
+  name: 'Tom Cook',
+  email: 'tom@example.com',
+  imageUrl:
+    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+}
+const navigation = [
+  { name: 'Dashboard', href: '#', current: true },
+  { name: 'Team', href: '#', current: false },
+]
+const userNavigation = [
+  { name: 'Your Profile', href: '#' },
+  { name: 'Settings', href: '#' },
+  { name: 'Sign out', href: '#' },
+]
 
-function Navbar({children}) {
-    return (
-        <>
-        <div className="min-h-full">
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
+
+function Navbar({ children }) {
+  return (
+    <>
+      <div className="min-h-full">
         <Disclosure as="nav" className="bg-gray-800">
           {({ open }) => (
             <>
@@ -62,19 +62,19 @@ function Navbar({children}) {
                   </div>
                   <div className="hidden md:block">
                     <div className="ml-4 flex items-center md:ml-6">
-                        <Link to="/cart">
-                      <button
-                        type="button"
-                        className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                      >
-                        <span className="absolute -inset-1.5" />
-                        <span className="sr-only">View notifications</span>
-                        <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
-                      </button>
+                      <Link to="/cart">
+                        <button
+                          type="button"
+                          className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                        >
+                          <span className="absolute -inset-1.5" />
+                          <span className="sr-only">View notifications</span>
+                          <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
+                        </button>
                       </Link>
-                        <span className="inline-flex items-center rounded-md mb-7 -ml-2 bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
+                      <span className="inline-flex items-center rounded-md mb-7 -ml-2 bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
                         3
-                    </span>
+                      </span>
 
                       {/* Profile dropdown */}
                       <Menu as="div" className="relative ml-3">
@@ -157,17 +157,17 @@ function Navbar({children}) {
                       <div className="text-sm font-medium leading-none text-gray-400">{user.email}</div>
                     </div>
                     <Link to="/cart">
-                    <button
-                      type="button"
-                      className="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                    >
-                      <span className="absolute -inset-1.5" />
-                      <span className="sr-only">View notifications</span>
-                      <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
-                    </button>
+                      <button
+                        type="button"
+                        className="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                      >
+                        <span className="absolute -inset-1.5" />
+                        <span className="sr-only">View notifications</span>
+                        <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
+                      </button>
                     </Link>
-                      <span className="inline-flex items-center rounded-md mb-7 -ml-2 bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
-                        3
+                    <span className="inline-flex items-center rounded-md mb-7 -ml-2 bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
+                      3
                     </span>
                   </div>
                   <div className="mt-3 space-y-1 px-2">
@@ -197,8 +197,8 @@ function Navbar({children}) {
           <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">{children}</div>
         </main>
       </div>
-        </>
-    );
+    </>
+  );
 }
 
 export default Navbar;
